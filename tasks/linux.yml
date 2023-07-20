@@ -1,0 +1,23 @@
+---
+- name: Set Hostname with hostname command
+  hostname:
+    name: "{{ hostname }}"
+  notify:
+    - restart hostname
+    - restart systemd-logind
+
+- name: Re-gather facts
+  action: setup
+  when: ansible_hostname != fqdn
+
+- name: Build hosts file (backups will be made)
+  lineinfile:
+    dest: /etc/hosts
+    regexp: "^{{ ip_address }}"
+    line: "{{ ip_address }} {{ fqdn }} {{ hostname }}"
+    state: present
+    backup: yes
+  when: ip_address is defined
+  notify:
+    - restart hostname
+    - restart systemd-logind

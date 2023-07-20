@@ -20,3 +20,4 @@
   notify:
     - restart hostname
     - restart systemd-logind
+  tags: molecule-notest

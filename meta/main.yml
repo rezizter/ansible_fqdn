@@ -1,25 +1,23 @@
 ---
-galaxy_info:
-    author: Roman Gorodeckij
-    description: Set FQDN and hostname
-    license: MIT
-    min_ansible_version: 2.0
-    platforms:
-        - name: EL
-          versions:
-              - all
-        - name: Ubuntu
-          versions:
-              - all
-        - name: Debian
-          versions:
-              - all
-        - name: Windows
-          versions:
-              - all
-    categories:
-        - networking
-        - system
-
 dependencies: []
 
+galaxy_info:
+  role_name: ansible_fqdn
+  author: rezizter
+  description: fqdn role for Ansible
+  license: "license (MIT)"
+  min_ansible_version: 2.0
+  platforms:
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+  galaxy_tags:
+    - development
+    - fqdn

@@ -16,6 +16,7 @@
     regexp: "^{{ ip_address }}"
     line: "{{ ip_address }} {{ fqdn }} {{ hostname }}"
     state: present
+    backup: yes
   when: ip_address is defined
   notify:
     - restart hostname

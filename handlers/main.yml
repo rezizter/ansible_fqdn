@@ -2,8 +2,8 @@
 ---
 - name: restart hostname
   service:
-    name: "hostname{{ '.sh' if 
-    (ansible_distribution_release == 'wheezy') else '' }}"
+    name: "hostname{{ '.sh' if
+      (ansible_distribution_release == 'wheezy') else '' }}"
     state: restarted
   when: >
     ansible_os_family != 'RedHat'

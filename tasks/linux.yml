@@ -10,13 +10,12 @@
   action: setup
   when: ansible_hostname != fqdn
 
-- name: Build hosts file (backups will be made)
-  lineinfile:
+- name: Build hosts file
+  ansible.builtin.lineinfile:
     dest: /etc/hosts
     regexp: "^{{ ip_address }}"
     line: "{{ ip_address }} {{ fqdn }} {{ hostname }}"
     state: present
-    backup: yes
   when: ip_address is defined
   notify:
     - restart hostname

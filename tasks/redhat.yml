@@ -2,13 +2,16 @@
 - name: Redhat | Install libselinux-python on el7
   yum:
     name: libselinux-python
-  when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "7")
+  when: (ansible_facts['distribution'] == "CentOS"
+    and ansible_facts['distribution_major_version'] == "7")
 
 - name: Redhat | Install libselinux-python on el8
   yum:
     name: python3-libselinux
-  when: (ansible_facts['distribution'] == "CentOS" or "Rocky" and ansible_facts['distribution_major_version'] >= "8")
+  when: (ansible_facts['distribution'] == "CentOS"
+   or "Rocky" and ansible_facts['distribution_major_version'] >= "8")
 
 
 - name: Redhat | Update sysconfig
-  lineinfile: dest=/etc/sysconfig/network line="HOSTNAME={{ fqdn }}" regexp="HOSTNAME="
+  lineinfile: dest=/etc/sysconfig/network
+    line="HOSTNAME={{ fqdn }}" regexp="HOSTNAME="

@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include rezizter.ansible_fqdn"
+      include_role:
+        name: "rezizter.ansible_fqdn"

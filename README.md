@@ -13,7 +13,7 @@ Ansible version 2.0+
 * Ubuntu
 * Debian
 * Centos
-* Redhat
+* RockyLinux
 * Windows
 
 Credits

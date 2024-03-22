@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: centos-9
-    image: quay.io/centos/centos:stream9
+    image: quay.io/centos/centos
     pre_build_image: true
     command: /usr/sbin/init
     privileged: true

@@ -11,9 +11,9 @@
   when: (ansible_facts['distribution'] == "CentOS"
    or "Rocky" and ansible_facts['distribution_major_version'] >= "8")
 
-
 - name: Redhat | Update sysconfig
   ansible.builtin.lineinfile:
     path: /etc/sysconfig/network
-    line: "HOSTNAME={{ fqdn }}" regexp="HOSTNAME="
+    regexp="HOSTNAME="
+    line: "HOSTNAME={{ fqdn }}" 
     create: yes

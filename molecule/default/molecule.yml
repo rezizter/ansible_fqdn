@@ -4,8 +4,8 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: centos-9
-    image: quay.io/centos/centos
+  - name: almalinux-9
+    image: almalinux:9
     pre_build_image: true
     command: /usr/sbin/init
     privileged: true

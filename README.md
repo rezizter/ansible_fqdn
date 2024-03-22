@@ -12,7 +12,7 @@ Ansible version 2.0+
 
 * Ubuntu
 * Debian
-* Centos
+* AlmaLinux
 * RockyLinux
 * Windows
 

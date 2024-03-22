@@ -15,5 +15,5 @@
   ansible.builtin.lineinfile:
     path: /etc/sysconfig/network
     regexp: "HOSTNAME="
-    line: "HOSTNAME={{ fqdn }}" 
+    line: "HOSTNAME={{ fqdn }}"
     create: yes

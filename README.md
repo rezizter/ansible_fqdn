@@ -12,8 +12,8 @@ Ansible version 2.0+
 
 * Ubuntu
 * Debian
-* AlmaLinux
-* RockyLinux
+* AlmaLinux 8
+* RockyLinux 8
 * Windows
 
 Credits

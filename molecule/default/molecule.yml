@@ -4,8 +4,8 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: almalinux-9
-    image: almalinux:9
+  - name: almalinux-8
+    image: almalinux:8
     pre_build_image: true
     command: /usr/sbin/init
     privileged: true
